@@ -10,7 +10,7 @@ export function App() {
   const [selectAnswerIndex, setSelectAnswerIndex] = useState(null);
   const [score, setScore] = useState(INITIAL_SCORE);
 
-  const { question, options, correctAnswers } = questions[currentQuestion];
+  const { question, options, correctAnswer } = questions[currentQuestion];
 
   const handleOptionClick = (index) => {
     setSelectAnswerIndex(index);
@@ -24,7 +24,7 @@ export function App() {
       <QuestionSection 
         question={question} 
         options={options} 
-        correctAnswer={correctAnswers} 
+        correctAnswer={correctAnswer} 
         selectAnswerIndex={selectAnswerIndex}
         handleOptionClick={handleOptionClick}
       />
